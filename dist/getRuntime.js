@@ -1,0 +1,2 @@
+"use strict";Object.defineProperty(exports, "__esModule", {value: true});var _chunkPS4YZG5Bjs = require('./chunk-PS4YZG5B.js');require('./chunk-2YXXFGBV.js');exports.default = _chunkPS4YZG5Bjs.a;
+//# sourceMappingURL=getRuntime.js.map
