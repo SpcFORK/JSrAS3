@@ -9,7 +9,7 @@ declare global {
     applicationDomain: AST_ApplicationDomain | null;
     checkPolicyFile: boolean;
     imageDecodingPolicy: string;
-    parameters: Object;
+    parameters: Record<string, any>;
     requestedContentParent: AST_DisplayObjectContainer;
     securityDomain: AST_SecurityDomain | null;
 
