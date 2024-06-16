@@ -46,6 +46,4 @@ declare global {
   
 }
 
-export type {
-  AST_ApplicationDomain,
-}
+export type { AST_ApplicationDomain }

@@ -240,6 +240,4 @@ All properties of the Capabilities class are read-only.
 
 }
 
-export type {
-  AST_Capabilities
-}
+export type { AST_Capabilities }

@@ -40,6 +40,4 @@ declare global {
 
 }
 
-export type {
-  AST_IMEConversionMode
-}
+export type { AST_IMEConversionMode }

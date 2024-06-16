@@ -75,6 +75,4 @@ declare global {
   
 }
 
-export type {
-  AST_IME
-}
+export type { AST_IME }
