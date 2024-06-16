@@ -6,7 +6,10 @@ import ApplicationDomain from './ApplicationDomain';
 import Capabilities from './Capabilities';
 import IME from './IME';
 import IMEConversionMode from './IMEConversionMode';
+import JPEGLoaderContext from './JPEGLoaderContext';
 import LoaderContext from './LoaderContext';
+import MessageChannel from './MessageChannel';
+import MessageChannelState from './MessageChannelState';
 import Security from './Security';
 import SecurityDomain from './SecurityDomain';
 import SecurityPanel from './SecurityPanel';
@@ -44,9 +47,24 @@ class AS_System {
   IMEConversionMode = IMEConversionMode;
 
   /**
+   * The JPEGLoaderContext class is used to load JPEG images.
+   */
+  JPEGLoaderContext = JPEGLoaderContext;
+
+  /**
    * The LoaderContext class provides options for loading SWF files and other media by using the Loader class.
    */
   LoaderContext = LoaderContext;
+
+  /**
+   * The MessageChannel class is used to send messages between SWF files and the program hosting Flash Player.
+   */
+  MessageChannel = MessageChannel;
+
+  /**
+   * The MessageChannelState class contains constants that indicate the current state of the MessageChannel object.
+   */
+  MessageChannelState = MessageChannelState;
 
   /**
    * The Security class lets you specify how content in different domains can communicate with each other.
