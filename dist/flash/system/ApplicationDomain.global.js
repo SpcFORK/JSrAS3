@@ -1,0 +1,2 @@
+"use strict";(()=>{var t=class i{static currentDomain=new i;get parentDomain(){return this.#n}#n;#i=new Map;constructor(n,a){this.#n=n||i.currentDomain,i.currentDomain&&this!==i.currentDomain?this.#n.#i.set(a+"",this):this.#n=null}getDefinition(n){return this.#i.get(n)}hasDefinition(n){return this.#i.has(n)}};})();
+//# sourceMappingURL=ApplicationDomain.global.js.map

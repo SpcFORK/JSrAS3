@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/flash/system/SecurityPanel.ts"],"sourcesContent":["export default class SecurityPanel implements AST_SecurityPanel {\n}"],"mappings":"AAAA,IAAqBA,EAArB,KAAgE,CAChE","names":["SecurityPanel"]}

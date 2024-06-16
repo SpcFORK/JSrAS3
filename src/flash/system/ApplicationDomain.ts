@@ -16,7 +16,7 @@ export default class ApplicationDomain implements AST_ApplicationDomain {
   #parentDomain: ApplicationDomain;
 
   #defMap = new Map<string, any>;
-
+  
   /** ApplicationDomain(parentDomain:ApplicationDomain = null)
    *
    * Creates a new application domain.
@@ -24,7 +24,7 @@ export default class ApplicationDomain implements AST_ApplicationDomain {
   constructor(parentDomain?: ApplicationDomain, source?: string) {
     this.#parentDomain = parentDomain || ApplicationDomain.currentDomain;
 
-    if (this !== ApplicationDomain.currentDomain) {
+    if (ApplicationDomain.currentDomain && this !== ApplicationDomain.currentDomain) {
       this.#parentDomain.#defMap.set(source + '', this);
     }
     else

@@ -6,7 +6,7 @@ import ApplicationDomain from './ApplicationDomain';
 import Capabilities from './Capabilities';
 import IME from './IME';
 import IMEConversionMode from './IMEConversionMode';
-import JPEGLoaderContext from './JPEGLoaderContext';
+// import JPEGLoaderContext from './JPEGLoaderContext';
 import LoaderContext from './LoaderContext';
 import MessageChannel from './MessageChannel';
 import MessageChannelState from './MessageChannelState';
@@ -18,7 +18,7 @@ import System from './System';
 /**
  * The flash.system package contains classes for accessing system-level functionality, such as security, garbage collection, etc.
  */
-class AS_System {
+export class AS_System {
 
   /**
    * Lets the SWF file communicate with either Flash Player or the program hosting Flash Player, such as a web browser.
@@ -49,7 +49,7 @@ class AS_System {
   /**
    * The JPEGLoaderContext class is used to load JPEG images.
    */
-  JPEGLoaderContext = JPEGLoaderContext;
+  // JPEGLoaderContext = JPEGLoaderContext;
 
   /**
    * The LoaderContext class provides options for loading SWF files and other media by using the Loader class.
@@ -85,4 +85,5 @@ class AS_System {
    * The System class contains properties related to local settings and operations.
    */
   System = System;
+
 }

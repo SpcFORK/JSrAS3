@@ -1,0 +1,2 @@
+"use strict";var s=Object.defineProperty;var o=Object.getOwnPropertyDescriptor;var l=Object.getOwnPropertyNames;var r=Object.prototype.hasOwnProperty;var c=(t,e,i,n)=>{if(e&&typeof e=="object"||typeof e=="function")for(let a of l(e))!r.call(t,a)&&a!==i&&s(t,a,{get:()=>e[a],enumerable:!(n=o(e,a))||n.enumerable});return t};var g=t=>c(s({},"__esModule",{value:!0}),t);var v={};module.exports=g(v);
+//# sourceMappingURL=AST_MessageChannel.js.map

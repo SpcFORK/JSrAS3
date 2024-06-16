@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/flash/system/Security.ts"],"sourcesContent":["export default class Security implements AST_Security {\n}"],"mappings":"AAAA,IAAqBA,EAArB,KAAsD,CACtD","names":["Security"]}

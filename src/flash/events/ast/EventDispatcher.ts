@@ -1,4 +1,4 @@
-import { AS_IEventDispatcher } from '../IEventDispatcher'
+import { AS_IEventDispatcher } from './IEventDispatcher'
 import { AS_EventListener } from '../EventListener'
 
 declare global {
@@ -15,6 +15,7 @@ declare global {
     public removeEventListener(type: string, listener: Function, useCapture: boolean): void
 
     public willTrigger(type: string): boolean
+  
   }
 }
 

@@ -2,7 +2,9 @@ import './global'
 
 import AS_MessageChannelState from "./MessageChannelState";
 
-export class AS_MessageChannel extends AST_MessageChannel implements AST_EventDispatcher {
+import { AS_EventDispatcher } from '../events'
+
+export default class AS_MessageChannel extends AS_EventDispatcher {
   #state: AS_MessageChannelState | undefined;
   #buffer: ArrayBuffer | undefined;
   #view: DataView | undefined;

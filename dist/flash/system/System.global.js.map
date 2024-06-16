@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/flash/system/System.ts"],"sourcesContent":["export default class System implements AST_System {\n}"],"mappings":"mBAAA,IAAqBA,EAArB,KAAkD,CAClD","names":["System"]}

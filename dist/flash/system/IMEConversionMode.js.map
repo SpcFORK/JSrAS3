@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/flash/system/IMEConversionMode.ts"],"sourcesContent":["export default class IMEConversionMode implements AST_IMEConversionMode {\n}"],"mappings":"yaAAA,IAAAA,EAAA,GAAAC,EAAAD,EAAA,aAAAE,IAAA,eAAAC,EAAAH,GAAA,IAAqBE,EAArB,KAAwE,CACxE","names":["IMEConversionMode_exports","__export","IMEConversionMode","__toCommonJS"]}

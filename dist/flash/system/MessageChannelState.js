@@ -1,0 +1,2 @@
+"use strict";var i=Object.defineProperty;var r=Object.getOwnPropertyDescriptor;var s=Object.getOwnPropertyNames;var c=Object.prototype.hasOwnProperty;var p=(o,e)=>{for(var a in e)i(o,a,{get:e[a],enumerable:!0})},m=(o,e,a,l)=>{if(e&&typeof e=="object"||typeof e=="function")for(let t of s(e))!c.call(o,t)&&t!==a&&i(o,t,{get:()=>e[t],enumerable:!(l=r(e,t))||l.enumerable});return o};var S=o=>m(i({},"__esModule",{value:!0}),o);var d={};p(d,{default:()=>n});module.exports=S(d);var n=class{static CLOSED;static CLOSING;static OPEN};
+//# sourceMappingURL=MessageChannelState.js.map

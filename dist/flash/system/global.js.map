@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/flash/system/global.ts"],"sourcesContent":["export * from './ast'\n\ndeclare global {\n  const AS_trapallkeys: boolean;\n  const AS_allowscale: boolean;\n  const AS_showmenu: boolean;\n}"],"mappings":"+WAAA,IAAAA,EAAA,kBAAAC,EAAAD","names":["global_exports","__toCommonJS"]}

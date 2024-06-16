@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/flash/events/EventListener.ts"],"sourcesContent":["export interface AS_EventListener {\n  priority: number;\n  listener: Function | WeakRef<Function>;\n  useCapture: boolean;\n}\n"],"mappings":"+WAAA,IAAAA,EAAA,kBAAAC,EAAAD","names":["EventListener_exports","__toCommonJS"]}

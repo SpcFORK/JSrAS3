@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/flash/system/Capabilities.ts"],"sourcesContent":["export default class Capabilities implements AST_Capabilities {\n}"],"mappings":"mBAAA,IAAqBA,EAArB,KAA8D,CAC9D","names":["Capabilities"]}

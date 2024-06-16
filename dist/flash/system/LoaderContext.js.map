@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/flash/system/LoaderContext.ts"],"sourcesContent":["export default class LoaderContext implements AST_LoaderContext {\n}"],"mappings":"yaAAA,IAAAA,EAAA,GAAAC,EAAAD,EAAA,aAAAE,IAAA,eAAAC,EAAAH,GAAA,IAAqBE,EAArB,KAAgE,CAChE","names":["LoaderContext_exports","__export","LoaderContext","__toCommonJS"]}

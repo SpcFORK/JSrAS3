@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/flash/global.ts"],"sourcesContent":["import './system/global'\n\nexport {}"],"mappings":"+WAAA,IAAAA,EAAA,kBAAAC,EAAAD","names":["global_exports","__toCommonJS"]}

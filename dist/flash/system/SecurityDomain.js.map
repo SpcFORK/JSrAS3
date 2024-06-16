@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/flash/system/SecurityDomain.ts"],"sourcesContent":["export default class SecurityDomain implements AST_SecurityDomain {\n}"],"mappings":"yaAAA,IAAAA,EAAA,GAAAC,EAAAD,EAAA,aAAAE,IAAA,eAAAC,EAAAH,GAAA,IAAqBE,EAArB,KAAkE,CAClE","names":["SecurityDomain_exports","__export","SecurityDomain","__toCommonJS"]}

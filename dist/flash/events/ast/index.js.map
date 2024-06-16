@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../src/flash/events/ast/index.ts"],"sourcesContent":["export * from './EventDispatcher';\nexport * from './IEventDispatcher';"],"mappings":"+WAAA,IAAAA,EAAA,kBAAAC,EAAAD","names":["ast_exports","__toCommonJS"]}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/flash/system/IME.ts"],"sourcesContent":["export default class IME implements AST_IME {\n}"],"mappings":"AAAA,IAAqBA,EAArB,KAA4C,CAC5C","names":["IME"]}

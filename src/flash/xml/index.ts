@@ -19,104 +19,7 @@ export type InternalNodeTypes = XMLNodeTypes
 // ---
 
 
-class AS3_XMLModule {
-  static AS3_XMLModule = this
-  AS3_XMLModule = AS3_XMLModule
-
-  XMLDocument = AS2_XMLDocument
-  XMLNode = AS2_XMLNode
-  XMLNodeType = AS2_XMLNodeType
-  XMLListClass = AS3_XMLList
-  XMLClass = AS3_XML
-  DTDMaker = DTDMaker
-
-  XMLDefaultsClass = XMLModuleDefaultsClass
-  XMLDefaults = new XMLModuleDefaultsClass;
-
-  static isXMLName(name: string): boolean {
-    return !!name?.match?.(/^[a-zA-Z0-9_-]+$/)
-  }
-  isXMLName = AS3_XMLModule.isXMLName
-
-  /** XML(expression:Object):XML
-   *
-   * Converts an object to an XML object.
-   *
-   * The following table describes return values for various input types.
-   *
-   * Parameter | Type	Return Value
-   * * Boolean | Value is first converted to a string, then converted to an XML object.
-   * * Null | A runtime error occurs (TypeError exception).
-   * * Number | Value is first converted to a string, then converted to an XML object.
-   * * Object | Converts to XML only if the value is a String, Number or Boolean value. Otherwise a runtime error occurs (TypeError exception).
-   * * String | Value is converted to XML.
-   * * Undefined | A runtime error occurs (TypeError exception).
-   * * XML | Input value is returned unchanged.
-   * * XMLList | Returns an XML object only if the XMLList object contains only one property of type XML. Otherwise a runtime error occurs (TypeError exception).
-  */
-  static XML(xml: XMLArgs) {
-    if (xml instanceof AS3_XML)
-      return xml;
-    if (xml instanceof AS3_XMLList)
-      // if (xml.length() == 1) return new AS3_XML(xml.nodes[0]); // @Todo
-      if (xml.length() == 1) { }
-      else throw new Error("XMLList must contain only one property of type XML");
-
-    if (typeof xml === "boolean" || typeof xml === "number")
-      return new AS3_XML(xml.toString());
-    if (typeof xml === "string")
-      return new AS3_XML(xml);
-    if (xml === undefined)
-      throw new TypeError("Undefined");
-    throw new TypeError("Invalid argument");
-  }
-  XML = AS3_XMLModule.XML
-
-  /**	XMLList(expression:Object):XMLList
-   * 
-   * Converts an object to an XMLList object.
-   *
-   * The following table describes return values for various input types.
-   *
-   * Parameter Type |	Return Value
-   * * Boolean | Value is first converted to a string, then converted to an XMLList object.
-   * * Null | A runtime error occurs (TypeError exception).
-   * * Number | Value is first converted to a string, then converted to an XMLList object.
-   * * Object | Converts to XMLList only if the value is a String, Number or Boolean value. Otherwise a runtime error occurs (TypeError exception).
-   * * String | Value is converted to an XMLList object.
-   * * Undefined | A runtime error occurs (TypeError exception).
-   * * XML | Value is converted to an XMLList object.
-   * * XMLList | Input value is returned unchanged.
-  */
-  static XMLList(xml: XMLArgs) {
-    if (xml instanceof AS3_XMLList)
-      return xml;
-    if (typeof xml === "boolean" || typeof xml === "number")
-      return new AS3_XMLList(xml.toString());
-    if (typeof xml === "string")
-      return new AS3_XMLList(xml);
-    if (xml === undefined)
-      throw new TypeError("Undefined");
-    throw new TypeError("Invalid argument");
-  }
-  XMLList = AS3_XMLModule.XMLList
-}
-
-
-// ---
-
-
-// @ Export
-export const ASXML = new AS3_XMLModule;
-
-if (globalThis?.window)
-  (globalThis.window as any).ASXML = ASXML
-
-
-// ---
-
-
-class XMLModuleDefaultsClass implements AST_XMLModuleDefaultsClass {
+class XMLModuleDefaultsClass {
   static self = this
   self = XMLModuleDefaultsClass
 
@@ -160,6 +63,9 @@ class XMLModuleDefaultsClass implements AST_XMLModuleDefaultsClass {
     return new this.self;
   }
 }
+
+
+// ---
 
 
 /** An AS3-Standard-Like XMLNS
@@ -1065,3 +971,100 @@ export class AS3_XMLList {
   constructor(...any: any[]) { } // @TODO: Implement
   length(): any { }
 }
+
+
+// ---
+
+
+class AS3_XMLModule {
+  static AS3_XMLModule = this
+  AS3_XMLModule = AS3_XMLModule
+
+  XMLDocument = AS2_XMLDocument
+  XMLNode = AS2_XMLNode
+  XMLNodeType = AS2_XMLNodeType
+  XMLListClass = AS3_XMLList
+  XMLClass = AS3_XML
+  DTDMaker = DTDMaker
+
+  XMLDefaultsClass = XMLModuleDefaultsClass
+  XMLDefaults = new XMLModuleDefaultsClass;
+
+  static isXMLName(name: string): boolean {
+    return !!name?.match?.(/^[a-zA-Z0-9_-]+$/)
+  }
+  isXMLName = AS3_XMLModule.isXMLName
+
+  /** XML(expression:Object):XML
+   *
+   * Converts an object to an XML object.
+   *
+   * The following table describes return values for various input types.
+   *
+   * Parameter | Type	Return Value
+   * * Boolean | Value is first converted to a string, then converted to an XML object.
+   * * Null | A runtime error occurs (TypeError exception).
+   * * Number | Value is first converted to a string, then converted to an XML object.
+   * * Object | Converts to XML only if the value is a String, Number or Boolean value. Otherwise a runtime error occurs (TypeError exception).
+   * * String | Value is converted to XML.
+   * * Undefined | A runtime error occurs (TypeError exception).
+   * * XML | Input value is returned unchanged.
+   * * XMLList | Returns an XML object only if the XMLList object contains only one property of type XML. Otherwise a runtime error occurs (TypeError exception).
+  */
+  static XML(xml: XMLArgs) {
+    if (xml instanceof AS3_XML)
+      return xml;
+    if (xml instanceof AS3_XMLList)
+      // if (xml.length() == 1) return new AS3_XML(xml.nodes[0]); // @Todo
+      if (xml.length() == 1) { }
+      else throw new Error("XMLList must contain only one property of type XML");
+
+    if (typeof xml === "boolean" || typeof xml === "number")
+      return new AS3_XML(xml.toString());
+    if (typeof xml === "string")
+      return new AS3_XML(xml);
+    if (xml === undefined)
+      throw new TypeError("Undefined");
+    throw new TypeError("Invalid argument");
+  }
+  XML = AS3_XMLModule.XML
+
+  /**	XMLList(expression:Object):XMLList
+   * 
+   * Converts an object to an XMLList object.
+   *
+   * The following table describes return values for various input types.
+   *
+   * Parameter Type |	Return Value
+   * * Boolean | Value is first converted to a string, then converted to an XMLList object.
+   * * Null | A runtime error occurs (TypeError exception).
+   * * Number | Value is first converted to a string, then converted to an XMLList object.
+   * * Object | Converts to XMLList only if the value is a String, Number or Boolean value. Otherwise a runtime error occurs (TypeError exception).
+   * * String | Value is converted to an XMLList object.
+   * * Undefined | A runtime error occurs (TypeError exception).
+   * * XML | Value is converted to an XMLList object.
+   * * XMLList | Input value is returned unchanged.
+  */
+  static XMLList(xml: XMLArgs) {
+    if (xml instanceof AS3_XMLList)
+      return xml;
+    if (typeof xml === "boolean" || typeof xml === "number")
+      return new AS3_XMLList(xml.toString());
+    if (typeof xml === "string")
+      return new AS3_XMLList(xml);
+    if (xml === undefined)
+      throw new TypeError("Undefined");
+    throw new TypeError("Invalid argument");
+  }
+  XMLList = AS3_XMLModule.XMLList
+}
+
+
+// ---
+
+
+// @ Export
+export const ASXML = new AS3_XMLModule;
+
+if (globalThis?.window)
+  (globalThis.window as any).ASXML = ASXML

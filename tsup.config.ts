@@ -10,7 +10,7 @@ export default defineConfig({
     'fast-xml-parser'
   ],
   sourcemap: true,
-  splitting: true,
+  splitting: false,
   platform: 'browser',
   format: ['esm', 'cjs', 'iife'],
 })

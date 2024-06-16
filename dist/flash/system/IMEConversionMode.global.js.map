@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/flash/system/IMEConversionMode.ts"],"sourcesContent":["export default class IMEConversionMode implements AST_IMEConversionMode {\n}"],"mappings":"mBAAA,IAAqBA,EAArB,KAAwE,CACxE","names":["IMEConversionMode"]}

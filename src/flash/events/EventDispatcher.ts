@@ -1,9 +1,10 @@
-import { AS_IEventDispatcher } from './IEventDispatcher'
+import { AST_EventDispatcher } from './global'
+
 import { AS_EventListener } from './EventListener'
 
-export class AS_EventDispatcher implements AS_IEventDispatcher {
+export class AS_EventDispatcher {
 
-  private listeners: Map<string, AS_EventListener[]> = new Map();
+  private listeners = new Map<string, AS_EventListener[]>
 
   public addEventListener(type: string, listener: Function, useCapture: boolean = false, priority: number = 0, useWeakReference: boolean = false): void {
     if (!this.listeners.has(type)) {
