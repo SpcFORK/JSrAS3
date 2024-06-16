@@ -1,2 +1,0 @@
-import{a as o}from"./chunk-OH7U4L7U.mjs";import{a as t}from"./chunk-ZGX2GOJX.mjs";import"./chunk-IMHIUJPT.mjs";import"./chunk-V3FRSZ5B.mjs";import"./chunk-6HHLNLNT.mjs";import"./chunk-A6GKDPT3.mjs";function r(e){return t(o(e))}var i="";console.log(r(i));export{r as compile};
-//# sourceMappingURL=shuir.mjs.map

@@ -1,10 +1,5 @@
 import { AS_IEventDispatcher } from './IEventDispatcher'
-
-interface AS_EventListener {
-  priority: number
-  listener: Function | WeakRef<Function>
-  useCapture: boolean
-}
+import { AS_EventListener } from './EventListener'
 
 export class AS_EventDispatcher implements AS_IEventDispatcher {
 
@@ -34,15 +29,12 @@ export class AS_EventDispatcher implements AS_IEventDispatcher {
   public dispatchEvent(event: Event): boolean {
     const eventListeners = this.listeners.get(event.type);
     if (eventListeners) {
-      for (const { listener } of eventListeners) {
-        if (listener instanceof WeakRef) {
-          const derefListener = listener.deref();
-          if (derefListener) {
-            derefListener(event);
-          }
-        } else {
-          listener(event);
-        }
+      for (const { listener } of eventListeners) if (!(listener instanceof WeakRef)) {
+        listener(event);
+      } else {
+        const derefListener = listener.deref();
+        if (derefListener)
+          derefListener(event);
       }
       return true;
     }
@@ -55,13 +47,15 @@ export class AS_EventDispatcher implements AS_IEventDispatcher {
 
   public removeEventListener(type: string, listener: Function, useCapture: boolean = false): void {
     const eventListeners = this.listeners.get(type);
+
+    const filterListeners = (l: AS_EventListener) => {
+      if (l.listener instanceof WeakRef)
+        return l.listener.deref() !== listener;
+      return l.listener !== listener;
+    }
+
     if (eventListeners) {
-      this.listeners.set(type, eventListeners.filter(l => {
-        if (l.listener instanceof WeakRef) {
-          return l.listener.deref() !== listener;
-        }
-        return l.listener !== listener;
-      }));
+      this.listeners.set(type, eventListeners.filter((b) => filterListeners(b)));
     }
   }
 

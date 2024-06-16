@@ -1,2 +1,0 @@
-"use strict";Object.defineProperty(exports, "__esModule", {value: true});var _chunkL5P4VXKUjs = require('./chunk-L5P4VXKU.js');var _chunk35HTDM67js = require('./chunk-35HTDM67.js');require('./chunk-F3ENEXIH.js');require('./chunk-54A7JTPA.js');require('./chunk-DEYC77JC.js');require('./chunk-2YXXFGBV.js');function r(e){return _chunk35HTDM67js.a.call(void 0, _chunkL5P4VXKUjs.a.call(void 0, e))}var i="";console.log(r(i));exports.compile = r;
-//# sourceMappingURL=shuir.js.map

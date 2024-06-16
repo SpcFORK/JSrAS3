@@ -1,4 +1,4 @@
-import { IEventDispatcher } from '../../events/IEventDispatcher';
+import '../../events/ast/EventDispatcher';
 
 declare global {
 
@@ -62,7 +62,7 @@ declare global {
    *
    * The MessageChannel class is one of the special object types that are shared between workers rather than copied between them. When you pass a message channel from one worker to another worker either by calling the Worker object's setSharedProperty() method or by using a MessageChannel object, both workers have a reference to the same MessageChannel object in the runtime's memory.
    */
-  class AST_MessageChannel implements EventDispatcher {
+  class AST_MessageChannel extends AST_EventDispatcher {
 
     /** messageAvailable:Boolean  [read-only]
      *
