@@ -1,8 +1,7 @@
 import './global'
 
-type TODO = unknown
-
 import fxcommand from './fxcommand'
+
 import ApplicationDomain from './ApplicationDomain';
 import Capabilities from './Capabilities';
 import IME from './IME';
@@ -37,35 +36,35 @@ class AS_System {
   /**
    * The IME class lets you directly manipulate the operating system's input method editor (IME) in the Flash runtime application that is running on a client computer.
    */
-  IME: TODO;
+  IME = IME;
 
   /**
    * This class contains constants for use with the IME.conversionMode property.
    */
-  IMEConversionMode: TODO;
+  IMEConversionMode = IMEConversionMode;
 
   /**
    * The LoaderContext class provides options for loading SWF files and other media by using the Loader class.
    */
-  LoaderContext: TODO;
+  LoaderContext = LoaderContext;
 
   /**
    * The Security class lets you specify how content in different domains can communicate with each other.
    */
-  Security: TODO;
+  Security = Security;
 
   /**
    * The SecurityDomain class represents the current security "sandbox," also known as a security domain.
    */
-  SecurityDomain: TODO;
+  SecurityDomain = SecurityDomain;
 
   /**
    * The SecurityPanel class provides values for specifying which Security Settings panel you want to display.
    */
-  SecurityPanel: TODO;
+  SecurityPanel = SecurityPanel;
 
   /**
    * The System class contains properties related to local settings and operations.
    */
-  System: TODO;
+  System = System;
 }
