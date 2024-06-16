@@ -1,13 +1,7 @@
-import runtime from '../getRuntime';
+import runtime from '../../getRuntime';
 
 
-export type XMLArgs = Boolean | null | Number | Object | String | undefined | AS3_XML | AS3_XMLList
-
-
-interface XMLAttribute {
-  name: string;
-  value: string;
-}
+export type XMLArgs = Boolean | null | Number | Object | String | undefined | AS3_XML | AS3_XMLList;
 
 
 export type XMLNodeTypes =
@@ -34,6 +28,7 @@ class AS3_XMLModule {
   XMLNodeType = AS2_XMLNodeType
   XMLListClass = AS3_XMLList
   XMLClass = AS3_XML
+  DTDMaker = DTDMaker
 
   XMLDefaultsClass = XMLModuleDefaultsClass
   XMLDefaults = new XMLModuleDefaultsClass;
@@ -121,7 +116,7 @@ if (globalThis?.window)
 // ---
 
 
-class XMLModuleDefaultsClass {
+class XMLModuleDefaultsClass implements AST_XMLModuleDefaultsClass {
   static self = this
   self = XMLModuleDefaultsClass
 
@@ -161,7 +156,7 @@ class XMLModuleDefaultsClass {
    */
   prettyPrinting = true
 
-  defaultSettings(): Object {
+  defaultSettings() {
     return new this.self;
   }
 }
@@ -997,12 +992,12 @@ class AS2_XMLDocument extends AS2_XMLNode {
 
     // @TODO: Implement native Parser
     nativeParser ||= false
-    
+
     let args = [version, enc, standalone, entrytag, dtd]
 
-    if (nativeParser) 
+    if (nativeParser)
       this.#parseXMLNative(source, ...args)
-    
+
     if (runtime == 'node') this.#parseJSNode(source, ...args)
     else this.#parseJSWeb(source, ...args)
   }
@@ -1033,7 +1028,7 @@ class AS2_XMLDocument extends AS2_XMLNode {
   }
 
   #parseXMLNative(source: string, ...args: any[]) {
-    
+
   }
 
   /** toString():String
@@ -1045,7 +1040,7 @@ class AS2_XMLDocument extends AS2_XMLNode {
   }
 }
 
-class AS3_XML {
+export class AS3_XML {
   // readonly #isProxy: boolean = true;
   // readonly #localName: Object;
   // readonly #parent: Object;
@@ -1066,7 +1061,7 @@ class AS3_XML {
   length(): any { }
 }
 
-class AS3_XMLList {
+export class AS3_XMLList {
   constructor(...any: any[]) { } // @TODO: Implement
   length(): any { }
 }

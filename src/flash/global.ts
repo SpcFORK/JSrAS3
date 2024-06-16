@@ -1,0 +1,3 @@
+import './system/global'
+
+export {}
